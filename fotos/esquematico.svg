@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="720" viewBox="0 0 1400 720">
+<rect width="1400" height="720" fill="#fff"/>
+<text x="700.0" y="34" font-family="DejaVu Sans" font-size="22" text-anchor="middle" fill="#111" font-weight="bold">Practica 3 - Maquina expendedora: esquematico de conexiones</text>
+<rect x="560" y="60" width="280" height="570" rx="6" fill="#e6f0fa" stroke="#1f4e79" stroke-width="3"/>
+<text x="700" y="87" font-family="DejaVu Sans" font-size="20" text-anchor="middle" fill="#1f4e79" font-weight="bold">Arduino UNO R3</text>
+<text x="700" y="610" font-family="DejaVu Sans" font-size="14" text-anchor="middle" fill="#1f4e79">Alimentacion: 5V / GND (USB)</text>
+<line x1="560" y1="120" x2="300" y2="120" stroke="#d62728" stroke-width="2.5"/>
+<circle cx="560" cy="120" r="4" fill="#222"/>
+<text x="568" y="125" font-family="DejaVu Sans" font-size="14" text-anchor="start" fill="#111">A0</text>
+<line x1="560" y1="160" x2="300" y2="160" stroke="#ff7f0e" stroke-width="2.5"/>
+<circle cx="560" cy="160" r="4" fill="#222"/>
+<text x="568" y="165" font-family="DejaVu Sans" font-size="14" text-anchor="start" fill="#111">A1</text>
+<line x1="560" y1="200" x2="300" y2="200" stroke="#2ca02c" stroke-width="2.5"/>
+<circle cx="560" cy="200" r="4" fill="#222"/>
+<text x="568" y="205" font-family="DejaVu Sans" font-size="14" text-anchor="start" fill="#111">A2</text>
+<line x1="560" y1="300" x2="300" y2="300" stroke="#1f77b4" stroke-width="2.5"/>
+<circle cx="560" cy="300" r="4" fill="#222"/>
+<text x="568" y="305" font-family="DejaVu Sans" font-size="14" text-anchor="start" fill="#111">A3</text>
+<line x1="560" y1="370" x2="300" y2="370" stroke="#9467bd" stroke-width="2.5"/>
+<circle cx="560" cy="370" r="4" fill="#222"/>
+<text x="568" y="375" font-family="DejaVu Sans" font-size="14" text-anchor="start" fill="#111">D5 (PWM)</text>
+<line x1="560" y1="450" x2="300" y2="450" stroke="#8c564b" stroke-width="2.5"/>
+<circle cx="560" cy="450" r="4" fill="#222"/>
+<text x="568" y="455" font-family="DejaVu Sans" font-size="14" text-anchor="start" fill="#111">D2 (INT0)</text>
+<line x1="840" y1="120" x2="1040" y2="120" stroke="#1f77b4" stroke-width="2.5"/>
+<circle cx="840" cy="120" r="4" fill="#222"/>
+<text x="832" y="125" font-family="DejaVu Sans" font-size="14" text-anchor="end" fill="#111">D4</text>
+<line x1="840" y1="160" x2="1040" y2="160" stroke="#9467bd" stroke-width="2.5"/>
+<circle cx="840" cy="160" r="4" fill="#222"/>
+<text x="832" y="165" font-family="DejaVu Sans" font-size="14" text-anchor="end" fill="#111">D7</text>
+<line x1="840" y1="200" x2="1040" y2="200" stroke="#8c564b" stroke-width="2.5"/>
+<circle cx="840" cy="200" r="4" fill="#222"/>
+<text x="832" y="205" font-family="DejaVu Sans" font-size="14" text-anchor="end" fill="#111">D8</text>
+<line x1="840" y1="240" x2="1040" y2="240" stroke="#e377c2" stroke-width="2.5"/>
+<circle cx="840" cy="240" r="4" fill="#222"/>
+<text x="832" y="245" font-family="DejaVu Sans" font-size="14" text-anchor="end" fill="#111">D10</text>
+<line x1="840" y1="280" x2="1040" y2="280" stroke="#17becf" stroke-width="2.5"/>
+<circle cx="840" cy="280" r="4" fill="#222"/>
+<text x="832" y="285" font-family="DejaVu Sans" font-size="14" text-anchor="end" fill="#111">D11</text>
+<line x1="840" y1="320" x2="1040" y2="320" stroke="#bcbd22" stroke-width="2.5"/>
+<circle cx="840" cy="320" r="4" fill="#222"/>
+<text x="832" y="325" font-family="DejaVu Sans" font-size="14" text-anchor="end" fill="#111">D12</text>
+<line x1="840" y1="445" x2="1040" y2="445" stroke="#7f7f7f" stroke-width="2.5"/>
+<circle cx="840" cy="445" r="4" fill="#222"/>
+<text x="832" y="450" font-family="DejaVu Sans" font-size="14" text-anchor="end" fill="#111">D9</text>
+<line x1="840" y1="485" x2="1040" y2="485" stroke="#d62728" stroke-width="2.5"/>
+<circle cx="840" cy="485" r="4" fill="#222"/>
+<text x="832" y="490" font-family="DejaVu Sans" font-size="14" text-anchor="end" fill="#111">D3 (INT1)</text>
+<line x1="840" y1="565" x2="1040" y2="565" stroke="#ff7f0e" stroke-width="2.5"/>
+<circle cx="840" cy="565" r="4" fill="#222"/>
+<text x="832" y="570" font-family="DejaVu Sans" font-size="14" text-anchor="end" fill="#111">D6</text>
+<rect x="60" y="75" width="240" height="165" rx="6" fill="#fff7e0" stroke="#8a6d00" stroke-width="2.5"/>
+<text x="180" y="97" font-family="DejaVu Sans" font-size="16" text-anchor="middle" fill="#111" font-weight="bold">Joystick</text>
+<text x="290" y="125" font-family="DejaVu Sans" font-size="14" text-anchor="end" fill="#111">VRx</text>
+<text x="290" y="165" font-family="DejaVu Sans" font-size="14" text-anchor="end" fill="#111">VRy</text>
+<text x="290" y="205" font-family="DejaVu Sans" font-size="14" text-anchor="end" fill="#111">SW</text>
+<text x="70" y="225" font-family="DejaVu Sans" font-size="13" text-anchor="start" fill="#555">+5V y GND del modulo</text>
+<line x1="300" y1="300" x2="250" y2="300" stroke="#444" stroke-width="2.5"/>
+<rect x="190" y="290" width="60" height="20" rx="6" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="220" y="305" font-family="DejaVu Sans" font-size="14" text-anchor="middle" fill="#111">R</text>
+<line x1="190" y1="300" x2="160" y2="300" stroke="#444" stroke-width="2.5"/>
+<polygon points="160,286 160,314 135,300" fill="#fff" stroke="#222" stroke-width="2.5"/>
+<line x1="135" y1="286" x2="135" y2="314" stroke="#222" stroke-width="2.5"/>
+<line x1="135" y1="300" x2="110" y2="300" stroke="#222" stroke-width="2.5"/>
+<text x="100" y="305" font-family="DejaVu Sans" font-size="13" text-anchor="end" fill="#111">GND</text>
+<text x="150" y="276" font-family="DejaVu Sans" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">LED1 - arranque/admin</text>
+<line x1="300" y1="370" x2="250" y2="370" stroke="#444" stroke-width="2.5"/>
+<rect x="190" y="360" width="60" height="20" rx="6" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="220" y="375" font-family="DejaVu Sans" font-size="14" text-anchor="middle" fill="#111">R</text>
+<line x1="190" y1="370" x2="160" y2="370" stroke="#444" stroke-width="2.5"/>
+<polygon points="160,356 160,384 135,370" fill="#fff" stroke="#222" stroke-width="2.5"/>
+<line x1="135" y1="356" x2="135" y2="384" stroke="#222" stroke-width="2.5"/>
+<line x1="135" y1="370" x2="110" y2="370" stroke="#222" stroke-width="2.5"/>
+<text x="100" y="375" font-family="DejaVu Sans" font-size="13" text-anchor="end" fill="#111">GND</text>
+<text x="150" y="346" font-family="DejaVu Sans" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">LED2 - PWM progreso</text>
+<line x1="300" y1="450" x2="230" y2="450" stroke="#444" stroke-width="2.5"/>
+<circle cx="230" cy="450" r="4" fill="#222"/>
+<line x1="230" y1="450" x2="190" y2="432" stroke="#222" stroke-width="2.5"/>
+<circle cx="180" cy="450" r="4" fill="#222"/>
+<line x1="180" y1="450" x2="110" y2="450" stroke="#222" stroke-width="2.5"/>
+<text x="100" y="455" font-family="DejaVu Sans" font-size="13" text-anchor="end" fill="#111">GND</text>
+<text x="205" y="420" font-family="DejaVu Sans" font-size="14" text-anchor="middle" fill="#111" font-weight="bold">Boton externo</text>
+<text x="205" y="482" font-family="DejaVu Sans" font-size="12" text-anchor="middle" fill="#555">INPUT_PULLUP (pulsado = LOW)</text>
+<rect x="1040" y="75" width="300" height="320" rx="6" fill="#e9f7ec" stroke="#1e6b34" stroke-width="2.5"/>
+<text x="1190" y="97" font-family="DejaVu Sans" font-size="16" text-anchor="middle" fill="#111" font-weight="bold">LCD 16x2 (HD44780)</text>
+<text x="1050" y="125" font-family="DejaVu Sans" font-size="14" text-anchor="start" fill="#111">RS</text>
+<text x="1050" y="165" font-family="DejaVu Sans" font-size="14" text-anchor="start" fill="#111">E</text>
+<text x="1050" y="205" font-family="DejaVu Sans" font-size="14" text-anchor="start" fill="#111">D4</text>
+<text x="1050" y="245" font-family="DejaVu Sans" font-size="14" text-anchor="start" fill="#111">D5</text>
+<text x="1050" y="285" font-family="DejaVu Sans" font-size="14" text-anchor="start" fill="#111">D6</text>
+<text x="1050" y="325" font-family="DejaVu Sans" font-size="14" text-anchor="start" fill="#111">D7</text>
+<text x="1050" y="350" font-family="DejaVu Sans" font-size="12" text-anchor="start" fill="#555">VSS, RW, K = GND     VDD = 5V</text>
+<text x="1050" y="367" font-family="DejaVu Sans" font-size="12" text-anchor="start" fill="#555">VO = cursor de potenciometro 10k (extremos a 5V y GND)</text>
+<text x="1050" y="384" font-family="DejaVu Sans" font-size="12" text-anchor="start" fill="#555">A = 5V (con R si el modulo no la lleva)</text>
+<rect x="1040" y="410" width="300" height="105" rx="6" fill="#eaf0ff" stroke="#2a4aa0" stroke-width="2.5"/>
+<text x="1190" y="432" font-family="DejaVu Sans" font-size="16" text-anchor="middle" fill="#111" font-weight="bold">HC-SR04</text>
+<text x="1050" y="450" font-family="DejaVu Sans" font-size="14" text-anchor="start" fill="#111">TRIG</text>
+<text x="1050" y="490" font-family="DejaVu Sans" font-size="14" text-anchor="start" fill="#111">ECHO</text>
+<text x="1190" y="508" font-family="DejaVu Sans" font-size="12" text-anchor="middle" fill="#555">VCC = 5V     GND</text>
+<rect x="1040" y="530" width="300" height="85" rx="6" fill="#fdeaea" stroke="#a02a2a" stroke-width="2.5"/>
+<text x="1190" y="552" font-family="DejaVu Sans" font-size="16" text-anchor="middle" fill="#111" font-weight="bold">DHT11</text>
+<text x="1050" y="570" font-family="DejaVu Sans" font-size="14" text-anchor="start" fill="#111">DATA</text>
+<text x="1190" y="605" font-family="DejaVu Sans" font-size="12" text-anchor="middle" fill="#555">VCC = 5V     GND</text>
+<text x="60" y="665" font-family="DejaVu Sans" font-size="13" text-anchor="start" fill="#333">R = resistencia en serie (220-330 ohm). Las lineas de color son hilos de senal; VCC y GND se conectan a los carriles de 5V y GND de la protoboard.</text>
+<text x="60" y="687" font-family="DejaVu Sans" font-size="13" text-anchor="start" fill="#333">Interrupciones: D2 (boton, INT0) y D3 (ECHO, INT1), ambas por flanco CHANGE. Watchdog de 1 s.</text>
+</svg>
