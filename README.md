@@ -1,10 +1,22 @@
 # Práctica 3 · Máquina expendedora de café (Arduino UNO R3)
 
-## 📸 Montaje
-<!-- Añade aquí tus fotos: ![montaje](fotos/montaje1.jpg) -->
+## Montaje
 
-## 🔌 Esquemático
-<!-- Añade aquí el esquema (Fritzing/Tinkercad): ![esquema](fotos/esquema.png) -->
+Vista general del circuito (Arduino UNO R3, protoboard, LCD 16x2, joystick, sensor ultrasónico HC-SR04 y DHT11):
+
+![Vista general del montaje](fotos/montaje_general.jpg)
+
+Montaje en funcionamiento, en modo administración (los dos LEDs encendidos y el menú en pantalla):
+
+![Montaje funcionando en modo admin](fotos/montaje_funcionando.jpg)
+
+Detalle de la protoboard con el DHT11 y el potenciómetro de contraste del LCD:
+
+![Detalle de la protoboard](fotos/montaje_detalle_dht11.jpg)
+
+## Esquemático
+
+<!-- ESQUEMA -->
 
 ### Conexiones
 
@@ -20,7 +32,7 @@
 | Joystick SW | A2 | INPUT_PULLUP |
 | LCD 16x2 | RS=4, E=7, D4..D7 = 8, 10, 11, 12 | LiquidCrystal |
 
-## 🧠 Descripción de la solución
+## Descripción de la solución
 
 El programa es una **máquina de estados no bloqueante**: no usa `delay()` (salvo los microsegundos del pulso TRIG) y todo el tiempo se controla comparando `millis()`. Tiene tres modos: `ARRANQUE` (3 s, LED1 parpadeando a 500 ms), `SERVICIO` (cliente) y `ADMIN`. Dentro de cada modo hay un enum con sus subestados.
 
@@ -28,11 +40,11 @@ El programa es una **máquina de estados no bloqueante**: no usa `delay()` (salv
 
 | Recurso | ¿Usado? | Por qué |
 |---|---|---|
-| **Interrupciones hardware** | ✅ | El botón (D2) y el ECHO (D3) son eventos asíncronos: la ISR solo anota el instante (`micros()`) y el estado, y el `loop` procesa. Así no se pierde ninguna pulsación ni se mide mal el eco. |
-| **Watchdog** (`wdt_enable(WDTO_1S)`) | ✅ | Si el programa se cuelga, la placa se reinicia sola en 1 s. El `loop` tarda como mucho ~35 ms (lectura del DHT11), así que `wdt_reset()` al inicio del `loop` es seguro. |
-| **Threads** (ArduinoThread) | ❌ | No hacen falta: el `loop` cooperativo con `millis()` ya reparte el tiempo entre sensores, pantalla y botones, y evita el coste de memoria en un UNO. |
-| **PWM** | ✅ | `analogWrite` sobre LED2 simula el progreso de preparación (0–255 en 4–8 s). |
-| **ATOMIC_BLOCK** | ✅ | Copia segura de las variables `volatile` compartidas con las ISR (el AVR es de 8 bits y una lectura de 32 bits no es atómica). |
+| **Interrupciones hardware** | Sí | El botón (D2) y el ECHO (D3) son eventos asíncronos: la ISR solo anota el instante (`micros()`) y el estado, y el `loop` procesa. Así no se pierde ninguna pulsación ni se mide mal el eco. |
+| **Watchdog** (`wdt_enable(WDTO_1S)`) | Sí | Si el programa se cuelga, la placa se reinicia sola en 1 s. El `loop` tarda como mucho ~35 ms (lectura del DHT11), así que `wdt_reset()` al inicio del `loop` es seguro. |
+| **Threads** (ArduinoThread) | No | No hacen falta: el `loop` cooperativo con `millis()` ya reparte el tiempo entre sensores, pantalla y botones, y evita el coste de memoria en un UNO. |
+| **PWM** | Sí | `analogWrite` sobre LED2 simula el progreso de preparación (0–255 en 4–8 s). |
+| **ATOMIC_BLOCK** | Sí | Copia segura de las variables `volatile` compartidas con las ISR (el AVR es de 8 bits y una lectura de 32 bits no es atómica). |
 
 ### Detalles de diseño
 - **Antirrebote**: botón externo 35 ms (con el instante del último flanco que da la ISR) y SW del joystick 35 ms.
@@ -44,5 +56,5 @@ El programa es una **máquina de estados no bloqueante**: no usa `delay()` (salv
 - **Precios** en céntimos (`int`) para evitar decimales; en admin se editan de 5 en 5 y se descartan con izquierda.
 - **Admin**: Temperatura, Distancia, Contador (segundos encendido) y Modificar precio. LED1 y LED2 encendidos mientras se está en admin.
 
-## 💻 Código
+## Código
 Ver `maquina_expendedora.ino` (incluido en el zip).
